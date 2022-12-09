@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../img/fondo\ de\ pantalla.jpg");
+    padding: 0.2rem;
+}
+
+h1{
+    color: #4f6930;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 3rem;
+    font-weight: 2rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 2rem;
+}
+
+nav ul ul{
+    display: none;
+    position: absolute;
+}
+
+nav ul li{
+    position: relative; /*para que se muestrn y no cambien su posición usamos el relative y arriba usamos position: absolute y luego usamos el hover*/ /*EXPLICACIÓN EN CLASE EN PRIMER AFTER MINUTOS 30 */
+    display: inline-block;
+    font-weight: bold;
+    border: 2rem;
+    border: solid red;
+    border-radius: 2rem;
+    background-color: aqua;
+    list-style-type: none;
+    /*TrABAJAMOS EL ALTO con eigth, pero no se usa mucho
+    height: ;*/
+
+    /*Trabajamos el ancho con width
+    width: 12rem; */
+}
+
+nav ul li :hover{
+    font-size: 1.1rem;
+}
+
+nav ul li:hover > ul{
+    display: block;
+}
+
+nav ul li a{
+    text-decoration: none; /* Sacamos los subrayados*/
+    color: black; /* Letras en color negro en este caso*/
+    margin: 1rem;
+}
+
+nav ul{
+        display: flex;
+        justify-content: space-around;
+}
+
+.iconoWhatsapp{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    max-width: 6%;
+}
+
+/*Aplicamos estilos por NOMBRE DE CLASES, siempre poner el punto*/
+
+
+.h2_subtitulo{
+    color: red;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/*Aplicamos estilos por NOMBRE DE ID*/
+
+/* id=""  y se llaman con el numeral adelanta. Ejemplo #colorAzul*/
+
+/* No me anduvo
+nav{
+    position: relative;
+    top: 0;
+    z-index: 1;
+} 
+*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main p{
+    text-align: center;
+}
+
+main img{
+    max-width: 100%;
+    margin: 1rem;
+}
+
+.section2{
+    display: flex;
+}
+
+.section2 .izquierda{
+    flex: 50%;
+}
+
+.section2 .derecha{
+    flex: 50%;
+}
+
+section h3{
+    text-align: center;
+    color: rgb(4, 0, 255);
+    font-size: 1.2rem;
+}
+
+footer h4,h5{
+    margin: 1rem;
+    text-align: center;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.5fr 0.5fr;
+    grid-template-rows: 0.1fr 2fr 1fr 0.2fr;
+    height: 100vh;
+    grid-template-areas: "header header header header"
+                         "main main section2 section2"
+                         "main main section section"
+                         "footer footer footer footer";
+    gap: 0.8rem;
+}
+
+header{
+    grid-area: header;
+}
+
+main{
+    grid-area: main;
+}
+
+.section2{
+    grid-area: section2;
+}
+
+section{
+    grid-area: section;
+}
+
+footer{
+    grid-area: footer;
+}
